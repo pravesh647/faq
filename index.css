@@ -1,0 +1,117 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* Declaring color variables for later use */
+:root {
+    --sewaneePurple: #5e366e;
+    --font-stack: Sentinel SSm A,Sentinel SSm B,serif;;
+    --offwhite:#fefaff;
+  }
+
+body{
+    font-family: var(--font-stack);
+    margin: 0px;
+  }
+
+#container{
+    max-width: 800px;
+    width: auto;
+    text-align: center;
+    margin: 5% auto 0px auto;
+    border-radius: 30px;
+}
+
+.box{
+    font-size: larger;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+  /* Formatting all question divs */
+.q{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* background-color: #fefaff; */
+    color: var(--sewaneePurple);
+    
+    font-weight: bolder;
+    
+    min-height: 60px;
+
+    margin-bottom: 5px;
+    border: 1px solid var(--sewaneePurple);
+    
+    cursor: pointer;
+    
+}
+
+.q:hover{
+    background-color: var(--sewaneePurple);
+    border: 1px solid var(--offwhite);
+    color: var(--offwhite);
+    filter: brightness(1.2);
+}
+
+.arrow {
+    border: solid var(--sewaneePurple);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+
+.q:hover .arrow{
+    border: solid var(--offwhite);
+    border-width: 0 3px 3px 0;
+}
+
+/* .down {
+    /* transform: rotate(45deg); */
+    /* -webkit-transform: rotate(45deg); */
+/* } */
+
+/* .up { */
+    /* transform: rotate(-135deg); */
+    /* -webkit-transform: rotate(-135deg); */
+/* } */
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+    transition-timing-function: ease-out;
+}
+
+.show .arrow{
+    -webkit-transform: rotate(-135deg);
+}
+
+.hide .arrow{
+    -webkit-transform: rotate(45deg);
+}
+
+/* Formatting all answer divs */
+.a{
+    text-align: left;
+    line-height: 200%;
+    
+    margin: 0% auto 0px auto;
+    margin-bottom: 20px;
+    
+    background-color: var(--offwhite);
+    color: black;
+}
+
+
+/* Styling for Device with width <= 600px ------------ */
+
+@media only screen and (max-width: 600px) {
+    #container {
+      width: auto;
+      margin: 0.5rem;
+    }
+
+}
